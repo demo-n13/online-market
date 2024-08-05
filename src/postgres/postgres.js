@@ -1,7 +1,7 @@
-import { Pool } from "pg";
+import pg from "pg";
 import { databaseConfig } from "../config/database.config.js";
 
-const pool = new Pool({
+const pool = new pg.Pool({
   user: databaseConfig.user,
   password: databaseConfig.password,
   host: databaseConfig.host,
@@ -13,7 +13,7 @@ export async function fetchData(query, ...params) {
   const client = await pool.connect();
 
   try {
-    const { rows } = await client(query, params?.length ? params : []);
+    const { rows } = await client.query(query, params?.length ? params : []);
     return rows
   } catch (error) {
     console.log("db error", error)
