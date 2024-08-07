@@ -8,6 +8,7 @@ Category model:
   id: PK
   name: VARCHAR(256)
   image_url: VARCHAR(256)
+  category_id: INT -> reference Category.id
 
 
 Product model:
