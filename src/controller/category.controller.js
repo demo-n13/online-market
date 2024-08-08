@@ -38,5 +38,5 @@ export async function createCategory(req, res) {
     data?.categoryId
   );
 
-  res.send(response);
-}
+  res.send(response)
+  };
