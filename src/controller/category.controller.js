@@ -40,3 +40,33 @@ export async function createCategory(req, res) {
 
   res.send(response);
 }
+
+
+export const deleteCategory = async(req,res)=>{
+  const id = req.params.id
+
+  const respons = await fetchData('DELETE FROM category WHERE id = $1',id)
+
+  res.send({
+      message : 'Deleted',
+      data : respons
+  })
+}
+
+
+export const updateCategory = async(req,res)=>{
+
+  const id = req.params.id
+  const {name} = req.body
+
+  const respons = await fetchData(`
+    UPDATE category
+    SET name = $1
+    WHERE id = $2
+  `,name,id)
+
+  res.send({
+      message : 'Updated',
+      data : respons
+  })
+}
