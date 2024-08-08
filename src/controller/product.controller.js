@@ -28,6 +28,9 @@ export async function getSingleProduct(req, res) {
   });
 }
 
+
+
+
 export async function createProduct(req, res) {
   const { title, description, price, image_url, rating, category_id } =
     req.body;
@@ -48,35 +51,31 @@ export async function createProduct(req, res) {
   });
 }
 
-export async function deleteProduct(req, res) {
-  const { id } = req.params;
-  const response = await fetchData("DELETE FROM products WHERE id = $1", id);
-  if (response.rowCount === 0) {
-      res.status(404).send({ message: "Product not found" });
-  } else {
-      res.send({ message: "Product deleted successfully" });
-  }
+
+export const deleteProduct = async(req,res)=>{
+  const id = req.params.id
+
+  const respons = await fetchData('DELETE FROM product WHERE id = $1',id)
+
+  res.send({
+      message : 'Deleted',
+      data : respons
+  })
 }
 
 
+export const updateProduct = async(req,res)=>{
 
-export async function updateProduct(req, res) {
-  const { id } = req.params;
-  const data = req.body;
-  const response = await fetchData(
-      "UPDATE products SET title = $1, description = $2, price = $3, image_url = $4, rating = $5, category_id = $6 WHERE id = $7",
-      data.title,
-      data.description,
-      data.price,
-      data.image_url,
-      data.rating,
-      data.category_id,
-      id
-  );
-  if (response.rowCount === 0) {
-      res.status(404).send({ message: "Product not found" });
-  } else {
-      res.send(response);
-  }
-}
+  const id = req.params.id
 
+  const respons = await fetchData(`
+    UPDATE product
+    SET name = $1 , price = $2 , rating = $3 , category_id = $4
+    WHERE id = $5
+  ` ,
+  req.body.name,
+  req.body.price,
+  req.body.rating,
+  req.body.category_id,
+  id
+)};
