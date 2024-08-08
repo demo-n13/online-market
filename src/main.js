@@ -4,6 +4,7 @@ import morgan from "morgan";
 import { appConfig } from "./config/app.config.js";
 import { categoryRoutes } from "./routes/category.routes.js";
 import { productRoutes } from "./routes/product.routes.js";
+import { authRoutes } from "./routes/auth.routes.js";
 
 const app = express();
 
@@ -15,6 +16,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 app.use("/api/v1", categoryRoutes)
 app.use("/api/v1", productRoutes)
+app.use("/api/v1", authRoutes)
 
 
 app.listen(appConfig.port, appConfig.host, () => {
