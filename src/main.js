@@ -13,7 +13,7 @@ app.use(morgan("tiny"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.use("/api/v1", categoryRoutes)
+app.use("/api/v1/categories", categoryRoutes)
 app.use("/api/v1", productRoutes)
 
 
