@@ -40,3 +40,33 @@ export async function createCategory(req, res) {
 
   res.send(response);
 }
+
+export async function updateCategory(req, res) {
+  const id = req.params.categoryId;
+  const data = req.body;
+  const updateCate = await fetchData(
+    "UPDATE categories SET name=$1, image_url=$2 WHERE id=$3",
+    data.name,
+    data.image_url,
+    data?.categoryId
+  );
+
+  res.send({
+    message: "success",
+    data: updateCate,
+  });
+}
+
+
+export async function deleteCategory(req, res) {
+  const id = req.params.categoryId;
+  const deleteCate = await fetchData(
+    `DELETE FROM categories WHERE id=${id} RETURNING *`
+  );
+
+  res.send({
+    message: "success",
+    data: deleteCate,
+  });
+}
+

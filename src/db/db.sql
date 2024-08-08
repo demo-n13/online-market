@@ -27,4 +27,4 @@ FOREIGN KEY (category_id) REFERENCES category(id) ON DELETE CASCADE;
 
 
 
-SELECT * FROM category p LEFT JOIN category ch ON ch.category_id = p.id ORDER BY p.id;
+
