@@ -47,3 +47,23 @@ export async function createProduct(req, res) {
     data: newProduct,
   });
 }
+
+
+
+
+
+export async function updateProduct(req,res) {
+  
+  const { productId } = req.params;
+  const { title, description, price, image_url, rating, category_id } = req.body;
+
+  const result = await fetchData('UPDATE products SET title = $1, description = $2, price = $3, image_url = $4, rating = $5, category_id = $6 WHERE id = $7 RETURNING *',
+    title, description, price, image_url, rating, category_id, productId
+  )
+
+  if (result.rows.length === 0) {
+    res.status(404).json({ error: 'Product not found' });
+  }
+
+  res.json(result.rows[0]);
+}
