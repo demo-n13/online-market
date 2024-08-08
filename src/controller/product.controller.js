@@ -47,3 +47,52 @@ export async function createProduct(req, res) {
     data: newProduct,
   });
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+export async function deleteProduct(req,res) {
+  const { productId } = req.params;
+
+  const result = await fetchData('DELETE FROM products WHERE id = $1',productId)
+
+  if (result.rows.length === 0) {
+    return res.status(404).json({ error: 'Product not found' });
+  }
+
+  res.json({ message: 'Product deleted successfully' });
+}
+
+
+
+export async function updateProductPatch(req,res) {
+  const { productId } = req.params;
+  const updates = req.body;
+
+  const setClause = Object.keys(updates)
+    .map((key, idx) => `${key} = $${idx + 1}`)
+    .join(', ');
+
+  const values = Object.values(updates);
+
+  const result = await fetchData(`UPDATE products SET ${setClause} WHERE id = $${values.length + 1} RETURNING *`,...values , productId)
+
+  if (result.rows.length === 0) {
+    return res.status(404).json({ error: 'Product not found' });
+  }
+
+  res.json(result.rows[0]);
+}
