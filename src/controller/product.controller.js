@@ -47,3 +47,31 @@ export async function createProduct(req, res) {
     data: newProduct,
   });
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+export async function deleteProduct(req,res) {
+  const { productId } = req.params;
+
+  const result = await fetchData('DELETE FROM products WHERE id = $1',productId)
+
+  if (result.rows.length === 0) {
+    return res.status(404).json({ error: 'Product not found' });
+  }
+
+  res.json({ message: 'Product deleted successfully' });
+}
