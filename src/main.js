@@ -9,12 +9,16 @@ const app = express();
 
 
 // Middlaware
+
 app.use(morgan("tiny"));
+app.use("/public",express.static("../src/public"))
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.use("/api/v1", categoryRoutes)
 app.use("/api/v1", productRoutes)
+
+
 
 
 app.listen(appConfig.port, appConfig.host, () => {
