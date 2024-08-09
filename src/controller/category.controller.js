@@ -1,7 +1,6 @@
 import { fetchData } from "../postgres/postgres.js";
 
 export async function getAllCategory(req, res) {
-
   const parentCategories = await fetchData(
     "SELECT * FROM category WHERE category_id is null;"
   );
@@ -12,15 +11,17 @@ export async function getAllCategory(req, res) {
       c.id
     );
 
-    for(const sb of subCategories) {
-      const allProducts = await fetchData("SELECT * FROM product WHERE category_id = $1", sb.id)
+    for (const sb of subCategories) {
+      const allProducts = await fetchData(
+        "SELECT * FROM product WHERE category_id = $1",
+        sb.id
+      );
 
-      sb.products = allProducts
+      sb.products = allProducts;
     }
 
     c.subCategories = subCategories;
   }
-
 
   res.send({
     message: "success",
