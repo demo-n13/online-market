@@ -50,3 +50,20 @@ export async function createCategory(req, res) {
     message: "success",
   });
 }
+
+
+export async function updateCategory(req,res) {
+  
+  const [fields,files] = await form.parse(req)
+
+  await fetchData("UPDATE category SET name = $1 , image_url = $2 , category_id = $3 WHERE id = $4",
+    fields.name[0],
+    files.image_url[0].newFilename,
+    fields?.category_id?.length ? fields.category_id[0] : null,
+    req.params?.categoryId || null
+  )
+
+  res.status(201).send({
+    message: "success",
+  });
+}
