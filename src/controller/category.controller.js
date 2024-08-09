@@ -1,4 +1,10 @@
+import formidable from "formidable";
 import { fetchData } from "../postgres/postgres.js";
+
+const form = formidable({
+  keepExtensions: true,
+  uploadDir: "uploads",
+});
 
 export async function getAllCategory(req, res) {
   const parentCategories = await fetchData(
@@ -30,14 +36,17 @@ export async function getAllCategory(req, res) {
 }
 
 export async function createCategory(req, res) {
-  const data = req.body;
+  const [fields, files] = await form.parse(req);
 
-  const response = await fetchData(
+
+  await fetchData(
     "INSERT INTO category (name, image_url, category_id) VALUES ($1, $2, $3)",
-    data.name,
-    data.image_url,
-    data?.categoryId
+    fields.name[0],
+    files.image_url[0].newFilename,
+    fields?.category_id?.length ? fields.category_id[0] : null
   );
 
-  res.send(response);
+  res.status(201).send({
+    message: "success",
+  });
 }
