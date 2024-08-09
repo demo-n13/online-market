@@ -11,9 +11,10 @@ app.use(morgan("tiny"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
+// Routes
 app.use("/api/v1", routes)
 
-
+// app listening
 app.listen(appConfig.port, appConfig.host, () => {
   console.log(`listening on ${appConfig.port}`);
 });

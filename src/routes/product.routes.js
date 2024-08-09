@@ -8,6 +8,6 @@ import {
 export const productRoutes = Router();
 
 productRoutes
-  .get("/products/by/category/:categoryId", getProductsByCategory)
-  .get("/products/:productId", getSingleProduct)
-  .post("/products/add", createProduct);
+  .get("/by/category/:categoryId", getProductsByCategory)
+  .get("/:productId", getSingleProduct)
+  .post("/add", createProduct);

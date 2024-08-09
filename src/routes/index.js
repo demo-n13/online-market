@@ -4,4 +4,5 @@ import { productRoutes } from "./product.routes.js";
 
 export const routes = Router();
 
-routes.use(categoryRoutes).use(productRoutes);
+routes.use("/categories", categoryRoutes)
+.use("/products", productRoutes);

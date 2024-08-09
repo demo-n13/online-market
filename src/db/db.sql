@@ -141,3 +141,22 @@ CREATE TABLE payments (
 -- EXECUTE PROCEDURE category_update_trg_fn();
 
 
+-- [
+--   {
+--     id: 1,
+--     name: "category_name",
+--     image_url: "image.png",
+--     subcategories: [
+--       ...category
+--     ],
+--     products: [
+--       {
+
+--       }
+--     ]
+--   }
+-- ]
+
+-- SELECT c.*, json_agg(json_build_object('id', p.id, 'title', p.title)) as products 
+-- FROM category c LEFT JOIN product p 
+-- ON p.category_id = c.id GROUP BY c.id;
