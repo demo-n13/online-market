@@ -1,13 +1,12 @@
-import { Router } from "express";
-import {
-  createCategory,
-  deleteCategory,
-  getAllCategory,
-} from "../controller/category.controller.js";
+import { Router } from "express"
+import { createCategory, getAllCategory, getCategory, removeAllCategory, removeCategory, updateCategory } from "../controller/category.controller.js"
 
-export const categoryRoutes = Router();
+export const categoryRoutes = Router()
 
 categoryRoutes
-  .get("/", getAllCategory)
-  .post("/add", createCategory)
-  .delete("/delete/:categoryId", deleteCategory)
+.get("/categories/:categoryId", getCategory)
+.get("/categories", getAllCategory)
+.post("/categories/add", createCategory)
+.put("/categories/update/:categoryId", updateCategory)
+.delete("/categories/delete/:categoryId", removeCategory)
+.delete("/categories/delete/", removeAllCategory)
