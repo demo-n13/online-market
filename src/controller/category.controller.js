@@ -1,70 +1,73 @@
-import fs from "fs";
-import formidable from "formidable";
 import { fetchData } from "../postgres/postgres.js";
-import path from "path";
 
-const form = formidable({
-  keepExtensions: true,
-  uploadDir: "uploads",
-});
+export async function getCategory(req, res){
+    const categoryId = Number(req.params.categoryId)
 
-export async function getAllCategory(req, res) {
-  const parentCategories = await fetchData(
-    `SELECT pc.id as id, pc.name as name, pc.image_url as image_url, 
-    json_agg(json_build_object('id', ch.id, 'name', ch.name, 'image_url', ch.image_url)) as subcategories 
-    FROM (SELECT * FROM category WHERE category_id is null) pc 
-    FULL JOIN (SELECT * FROM category WHERE category_id is not null) ch 
-    ON ch.category_id = pc.id GROUP BY pc.id, pc.name, pc.image_url`
-  );
+    const selectedCategory = await fetchData(
+        `SELECT * FROM category
+        WHERE id = $1`,
+        categoryId
+    )
 
-  res.send({
-    message: "success",
-    data: parentCategories,
-  });
+    res.send({
+        message: "succes",
+        data: selectedCategory,
+    });
+}
+
+export async function getAllCategory(req, res){
+    const allCategories = await fetchData("SELECT * FROM category ORDER BY id")
+
+    res.send({
+        message: "succes",
+        data: allCategories,
+    });
 }
 
 export async function createCategory(req, res) {
-  const [fields, files] = await form.parse(req);
+    const data = req.body;
 
-  await fetchData(
-    "INSERT INTO category (name, image_url, category_id) VALUES ($1, $2, $3)",
-    fields.name[0],
-    files.image_url[0].newFilename,
-    fields?.category_id?.length ? fields.category_id[0] : null
-  );
+    const response = await fetchData(
+        "INSERT INTO category(name, image_url) VALUES ($1, $2)",
+        data.name,
+        data.image_url
+    );
 
-  res.status(201).send({
-    message: "success",
-  });
+    res.send("Data created successfully")
 }
 
-export async function deleteCategory(req, res) {
-  const { categoryId } = req.params;
+export async function updateCategory(req, res) {
+    const updatedData = req.body
+    const categoryId = Number(req.params.categoryId)
+    
+    const response = await fetchData(
+        `UPDATE category 
+        SET name = $1, image_url = $2 
+        WHERE id = $3`,
+        updatedData.name,
+        updatedData.image_url,
+        categoryId
+    )
 
-  const foundedCategory = await fetchData(
-    "SELECT * FROM category WHERE id = $1",
-    categoryId
-  );
+    res.send("Data updated successfully")
+}
 
-  if (!foundedCategory.length) {
-    res.status(404).send({
-      message: "Category not found",
-    });
-    return;
-  }
+export async function removeCategory(req, res) {
+    const categoryId = Number(req.params.categoryId)
 
-  if (foundedCategory[0]?.image_url) {
-    fs.unlink(
-      path.join(process.cwd(), "uploads", foundedCategory[0]?.image_url),
-      (err) => {
-        if (err) {
-          console.log(err);
-        }
-      }
-    );
-  }
+    const response = await fetchData(
+        `DELETE FROM category
+        WHERE id = $1`,
+        categoryId
+    )
 
-  await fetchData("DELETE FROM category WHERE id = $1", categoryId);
+    res.send("Data deleted successfully")
+}
 
-  res.status(204).send();
+export async function removeAllCategory(req, res) {
+    const response = await fetchData(
+        `DELETE FROM category`
+    )
+
+    res.send("All data deleted successfully")
 }
