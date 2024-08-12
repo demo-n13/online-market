@@ -1,12 +1,15 @@
 
 import { Router } from "express";
-import { getCustomerData } from "../controller/customer.controller.js";
+import { createCustomer, deleteCustomer, getCustomerData, updateCustomer } from "../controller/customer.controller.js";
 
 
 const customerRoutes = Router()
 
 customerRoutes
   .get('/', getCustomerData)
+  .post('/add',createCustomer)
+  .patch("/update/:customerId",updateCustomer)
+  .delete("/delete/:customerId", deleteCustomer)
 
 
 export default customerRoutes;
