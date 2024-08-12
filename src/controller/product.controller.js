@@ -28,6 +28,33 @@ export async function getSingleProduct(req, res) {
   });
 }
 
+export async function getAllProduct(req, res){
+  const {filter, sort, order} = req.query;
+
+  let query = "SELECT * FROM product"
+  let queryparams = [];
+
+  if (filter){
+    query += `WHERE title ILIKE ${filter}`;
+    queryparams.push(toUpperCase);
+  }
+
+  if (sort){
+    query += ` ORDER BY ${sort}`;
+    if (order){
+      queryparams.push(toUpperCase);
+    }
+  }
+
+  const allProducts = await fetchData(query, ...queryparams);
+
+
+  res.send({
+    message:"success",
+    data:allProducts, 
+  });
+}
+
 // export async function createProduct(req, res) {
 //   const { title, description, price, image_url, rating, category_id } =
 //     req.body;
