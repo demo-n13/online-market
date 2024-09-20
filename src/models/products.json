@@ -1,0 +1,257 @@
+[
+    {
+        "id":1,
+        "title":"Игровая консоль Sony PlayStation 5 Slim CD ,1TB (from U.A.E)",
+        "price":"6 699 000",
+        "sale":"11",
+        "image":"https://gmedia.playstation.com/is/image/SIEPDC/ps5-product-thumbnail-01-en-14sep21?$facebook$",
+        "deleted_price":"7 445 000",
+        "nasiya":"785 000"
+    },
+    {
+        "id":2,
+        "title":"Sony PS DoubleShock 4 simsiz boshqaruvchisi simsiz joystik",
+        "price":"210 000",
+        "sale":"15",
+        "image":"https://spphone.uz/wp-content/uploads/2023/05/black.webp",
+        "deleted_price":"500 000",
+        "nasiya":"25 000"
+    },
+    {
+        "id": 2,
+        "title": "Apple iPhone 13 Pro Max",
+        "price": "15 000 000",
+        "sale": 5,
+        "image": "https://openshop.uz/public/storage/uploads/products/photos/202209/FAGebeY6LkZ5EE01U1yLvhRuMNlV5n0iNk6uzpVf.jpg",
+        "deleted_price": "15 800 000",
+        "nasiya": "1250 000"
+    },
+    {
+        "id": 3,
+        "title": "Samsung Galaxy S21 Ultra",
+        "price": "13 000 000",
+        "sale": 15,
+        "image": "https://olcha.uz/image/700x700/products/2021-02-10/samsung-galaxy-s21-ultra-12256gb-phantonblack-21280-0.jpeg",
+        "deleted_price": "15 300 000",
+        "nasiya": "1 083 333"
+    },
+    {
+        "id": 4,
+        "title": "Dell XPS 13 Laptop",
+        "price": "12 000000",
+        "sale": 10,
+        "image": "https://olcha.uz/image/600x600/products/2022-08-01/noutbuk-dell-xps-13-9310-i7-1165g7-16512gb-ssd-134-87164-0.jpeg",
+        "deleted_price": "13 500 000",
+        "nasiya": "1 000 000"
+    },
+    {
+        "id": 5,
+        "title": "Apple MacBook Pro 16",
+        "price": "25 000 000",
+        "sale": 5,
+        "image": "https://allgood.uz/storage/products/November2023/L3hJAEYW3xgqh807NBQr.webp",
+        "deleted_price": "26 300 000",
+        "nasiya": "2 083 333"
+    },
+    {
+        "id": 6,
+        "title": "Samsung 55",
+        "price": "9 000 000",
+        "sale": 20,
+        "image": "https://images.samsung.com/is/image/samsung/p6pim/uz_ru/sm-a556ezkaskz/gallery/uz-ru-galaxy-a55-5g-sm-a556-sm-a556ezkaskz-540626415?$650_519_PNG$",
+        "deleted_price": "11 250 000",
+        "nasiya": "75 0000"
+    },
+    {
+        "id": 7,
+        "title": "Bose Noise Cancelling Headphones 700",
+        "price": "2 500 000",
+        "sale": 10,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL4gURwSB6JhgxWUQ8xi58uJZkA6d_BJgE0A&s",
+        "deleted_price": "2 780 000",
+        "nasiya": "20 8333"
+    },
+    {
+        "id": 8,
+        "title": "Apple Watch Series 7",
+        "price": "4 000 000",
+        "sale": 5,
+        "image": "https://univershop.uz/wp-content/uploads/2022/01/14050.jpg",
+        "deleted_price": "4 210 000",
+        "nasiya": "333 333"
+    },
+    {
+        "id": 9,
+        "title": "Amazon Echo (4th Gen)",
+        "price": "1 200 000",
+        "sale": 15,
+        "image": "https://cdn.mos.cms.futurecdn.net/vkgrU8x4g773fbXZLZfwtF.jpg",
+        "deleted_price": "1 410 000",
+        "nasiya": "100 000"
+    },
+    {
+        "id": 10,
+        "title": "Google Nest Hub Max",
+        "price": "1 500 000",
+        "sale": 10,
+        "image": "https://lh3.googleusercontent.com/uQZNPuGyf7dKvtGZWjoiyGcPg_A44yUS2tx-o2--dyuwp9A1vR4Efh1UF28KKLpGUg=w895",
+        "deleted_price": "1 670 000",
+        "nasiya": "12 5000"
+    },
+    {
+        "id": 11,
+        "title": "HP Spectre x360",
+        "price": 14000000,
+        "sale": 10,
+        "image": "https://olcha.uz/image/700x700/products/2021-10-16/hp-spectre-x360-15-eb1004ur-i7-1165g7-ddr4-16-gb-ssd-512gb-156-ultra-25949-3.jpeg",
+        "deleted_price": 15500000,
+        "nasiya": 1166667
+    },
+    {
+        "id": 12,
+        "title": "Sony WH-1000XM4 Headphones",
+        "price": 2000000,
+        "sale": 10,
+        "image": "https://m.media-amazon.com/images/I/61cm-9ZjI0L.jpg",
+        "deleted_price": 2220000,
+        "nasiya": 166667
+    },
+    {
+        "id": 13,
+        "title": "Microsoft Surface Laptop 4",
+        "price": 13000000,
+        "sale": 15,
+        "image": "https://images-cdn.ubuy.co.in/63403895c3813436e438c29c-microsoft-surface-laptop-4-13-5.jpg",
+        "deleted_price": 15300000,
+        "nasiya": 1083333
+    },
+    {
+        "id": 14,
+        "title": "Apple AirPods Pro",
+        "price": 3000000,
+        "sale": 5,
+        "image": "https://brostore.uz/cdn/shop/files/1_dc55ce44-289d-4dc0-8d90-1a9b2cd968cd.png?v=1700803758",
+        "deleted_price": 3160000,
+        "nasiya": 250000
+    },
+    {
+        "id": 15,
+        "title": "Fitbit Charge 4",
+        "price": 1000000,
+        "sale": 10,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSV-eDKrpPt-kQwB4bBizQ-5UCjYOi6W2WM_Q&s",
+        "deleted_price": 1110000,
+        "nasiya": 83333
+    },
+    {
+        "id": 16,
+        "title": "Samsung Galaxy Watch 4",
+        "price": 2000000,
+        "sale": 10,
+        "image": "https://images.samsung.com/is/image/samsung/p6pim/uz_ru/2108/gallery/uz-ru-galaxy-watch4-sm-r860nzkacis-482397702?$650_519_PNG$",
+        "deleted_price": 2220000,
+        "nasiya": 166667
+    },
+    {
+        "id": 17,
+        "title": "Canon EOS R5 Camera",
+        "price": 18000000,
+        "sale": 5,
+        "image": "https://i1.adis.ws/i/canon/eos-r5_front_rf24-105mmf4lisusm_32c26ad194234d42b3cd9e582a21c99b",
+        "deleted_price": 18950000,
+        "nasiya": 1500000
+    },
+    {
+        "id": 18,
+        "title": "Nintendo Switch OLED Model",
+        "price": 4500000,
+        "sale": 5,
+        "image": "https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_1.5/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_1.5/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_1.5/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_1.5/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_1.5/c_scale,w_400/ncom/en_US/products/hardware/nintendo-switch-oled-model-white-set/115461-switch-oled-white-console-dock-joy-con-grip-1200x675",
+        "deleted_price": 4740000,
+        "nasiya": 375000
+    },
+    {
+        "id": 19,
+        "title": "GoPro HERO10 Black",
+        "price": 4000000,
+        "sale": 10,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0gWc7kMO9VXTOYaBHD-14afTx8b4ABC-Ydw&s",
+        "deleted_price": 4440000,
+        "nasiya": 333333
+    },
+    {
+        "id": 20,
+        "title": "DJI Mavic Air 2",
+        "price": 6000000,
+        "sale": 10,
+        "image": "https://cdn.mos.cms.futurecdn.net/hEiMkqvPVki9L9bCQevxi.jpg",
+        "deleted_price": 6660000,
+        "nasiya": 500000
+    },
+    {
+        "id": 21,
+        "title": "Lenovo ThinkPad X1 Carbon",
+        "price": 15000000,
+        "sale": 5,
+        "image": "https://interbrands.uz/image/cache/catalog/Notebook/photo_2023-05-12_12-27-40-1000x600.jpg",
+        "deleted_price": 15800000,
+        "nasiya": 1250000
+    },
+    {
+        "id": 22,
+        "title": "Acer Predator Helios 300",
+        "price": 12000000,
+        "sale": 15,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6jCYSrJ2cPfE7l18bFXvo6wmZorut5tG5nQ&s",
+        "deleted_price": 14100000,
+        "nasiya": 1000000
+    },
+    {
+        "id": 23,
+        "title": "Razer Blade 15",
+        "price": 18000000,
+        "sale": 5,
+        "image": "https://notebook.uz/wa-data/public/shop/products/27/20/2027/images/4356/4356.970.jpg",
+        "deleted_price": 18900000,
+        "nasiya": 1500000
+    },
+    {
+        "id": 24,
+        "title": "Oculus Quest 2",
+        "price": 3000000,
+        "sale": 10,
+        "image": "https://olcha.uz/image/600x600/products/2022-06-14/oculus-quest-2-128gb-58682-0.jpeg",
+        "deleted_price": 3330000,
+        "nasiya": 250000
+    },
+    {
+        "id": 25,
+        "title": "Sony Bravia 65",
+        "price": 12000000,
+        "sale": 10,
+        "image": "https://s3p.kattabozor.uz/ri/74f7f0d6294bc893d3d029b7b4c33a8567bcab7e51780cb178f5d2b71887e328_i1HWa3_640l.jpg",
+        "deleted_price": 13500000,
+        "nasiya": 1000000
+    },
+    {
+        "id": 26,
+        "title": "LG C1 55",
+        "price": 10000000,
+        "sale": 15,
+        "image": "https://www.lg.com/ae/images/tvs-soundbars/md07523258/gallery/d1.jpg",
+        "deleted_price": 11750000,
+        "nasiya": 833333
+    },
+    {
+        "id": 27,
+        "title":"Iphone 15 Pro Max",
+        "price": "20 000 000",
+        "sale": 5,
+        "image": "https://api.radius.uz/storage/products/December2023/TEKMruAmZBPjWNZrT4Kd.webp",
+        "deleted_price": "22 000 000",
+        "nasiya": "15 000 000"
+    }
+    
+
+    
+]

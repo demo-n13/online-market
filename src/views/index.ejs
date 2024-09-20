@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/public/css/style.css" />
+    <link rel="stylesheet" href="/views/login.ejs">
+    <title>Gilos</title>
+</head>
+<body>
+  <header>
+    <nav class="nav_1">
+        <div class="header-inner_1">
+            <button class="rassrochka">0% Расрочкa</button>
+            <button class="skidka-btn">Скидки</button>
+            <button class="rozgrish">Розыгрыши</button>
+            <a href="https://www.google.com/maps/place/Najot+Ta'lim+Chilonzor+Filial/@41.2855182,69.2012377,17z/data=!3m1!4b1!4m6!3m5!1s0x38ae8ba578f4f58d:0xd7a2ecf23413b7a0!8m2!3d41.2855142!4d69.2038126!16s%2Fg%2F11nms27h2f?entry=ttu" target="_blank">Карта сайта</a>
+        </div>
+        <div class="header-inner_2">
+            <a href="#">+998 95 035 26 08</a>
+            <button class="header2-btn">Продайте на сайте</button>
+        </div>
+        <div class="languages">
+            <hr>
+            <a href="#">Узб</a>
+            <a href="#">O'z</a>
+            <a href="#">Рус</a>
+            <hr>
+        </div>
+    </nav>
+    <nav class="nav_2">
+        <h2>Gilos</h2>
+        <form action="#">
+            <button class="katalog-btn"><img src="/public/images/menu.svg" alt=""> Каталог</button>
+            <input type="text" placeholder="Поиск по каталогу">
+            <button class="search"><img src="/public/images/search-svgrepo-com.svg" alt=""></button>
+        </form>
+        <div class="icons">
+            <div class="icon1">
+                <a href="#"><img src="/public/images/column.png" alt=""></a>
+                <span><a href="#">Сравнкение</a></span>
+            </div>
+            <div class="icon2">
+                <a href="#"><img src="/public/images/heart-svgrepo-com.svg" alt=""></a>
+                <span><a href="#"> Избранное</a></span>
+            </div>
+            <div class="icon3">
+                <a href="#"><img src="/public/images/shopping-cart.png" alt=""></a>
+                <span><a href="#">Корзина</a></span>
+            </div>
+            <div class="icon4">
+                <a href="api/v1/login"><img src="/public/images/user-alt-1-svgrepo-com.svg" alt=""></a>
+                <span><a href="api/v1/login">Войти</a></span>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <main>
+      <div class="hero-add">
+        <div class="slideshow-container"> 
+
+          <div class="mySlides fade">
+            <img src="/public/images/title_site.jpg">
+          </div>
+        
+          <div class="mySlides fade">
+            <img src="/public/images/title_site2.jpg">
+          </div>
+        
+          <div class="mySlides fade">
+            <img src="/public/images/title_site3.jpg">
+          </div>
+          
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+          <br>
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
+        </div>
+  
+<!-- ------------------------------------------------------------------------------------------------- -->
+
+
+
+          <div class="hero-add-inner">
+            <div class="hero-add-inner-timer">
+              <h3>Товар дня</h3>
+              <h3 id="timer_1">15:30:60</h3>
+            </div>
+
+            <div class="hero-add-inner-skidka">
+              <h4>-5%</h4>
+            </div>
+
+            <div class="hero-add-inner-img">
+              <img src="https://images-cdn.ubuy.co.in/64c067093b4a367ab276dc83-loro-piana-1050-summer-walk-loafers-in.jpg" alt="lor piano rasm">
+            </div>
+
+            <div class="hero-add-inner-title">
+              <p>Loro Piano</p>
+            </div>
+
+            <div class="hero-add-inner-price">
+              <h3>600 000 сум</h3>
+              <del>650 000 сум</del>
+            </div>
+
+            <div class="hero-add-inner-nasiya">
+              <h4>31 000 сум x 12 мес</h4>
+            </div>
+
+          </div>
+          
+      </div>
+        <div class="hero-add-toward_img">
+          <div class="rounded-img">
+            <div class="rounded-img1">
+              <img src="/public/images/1-rasm.png" alt="">
+              <span>Телевизоры,<br>фото-видео и <br>аудио</span>
+            </div>
+            <div class="rounded-img2">
+              <img src="/public/images/2-rasm.png" alt="">
+              <span>Ноутбуки,<br>принтеры,<br>компьютеры</span>
+            </div>
+            <div class="rounded-img3">
+              <img src="/public/images/3-rasm.png" alt="">
+              <span>Смартфоны,<br>телефоны,<br>гаджеты</span>
+            </div>
+            <div class="rounded-img4">
+              <img src="/public/images/4-rasm.png" alt="">
+              <span>Бытовая техника</span>
+            </div>
+            <div class="rounded-img5">
+              <img src="/public/images/5-rasm.png" alt="">
+              <span>Все для кухни</span>
+            </div>
+            <div class="rounded-img6">
+              <img src="/public/images/6-rasm.png" alt="">
+              <span>Спорт товары</span>
+            </div>
+            <div class="rounded-img7">
+              <img src="/public/images/7-rasm.png" alt="">
+              <span>Красота и <br>здоровье</span>
+            </div>
+            <div class="rounded-img8">
+              <img src="/public/images/8-rasm.png" alt="">
+              <span>Товары из-за <br>рубежа</span>
+            </div>
+            <div class="rounded-img9">
+              <img src="/public/images/9-rasm.png" alt="">
+              <span>Автотовары</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-add-img">
+          <div class="images">
+            <a href="#"><img src="/public/images/1.jpg" alt=""></a>
+            <a href="#"><img src="/public/images/3.jpg" alt=""></a>
+            <a href="#"><img src="/public/images/2.jpg" alt=""></a>
+          </div>
+        </div>
+        
+      <section class="hero">
+        <div class="container">
+          <div class="wrapper">
+            <% for(let i = 0;i<=11 ; i++) { %>
+            <div class="hero-inner">
+
+              <div class="hero-inner-like">
+                <h4>-<%= data[i].sale %>%</h4>
+
+                <button id="heart-btn">
+                  <img
+                    class="heart"
+                    src="/public/images/heart-svgrepo-com.svg"
+                    alt="heart"
+                  />
+                </button>
+              </div>
+
+              <div class="hero-inner-wifi">
+                <button id="wifi-btn">
+                  <img class="wifi" src="/public/images/column.png" alt="heart" />
+                </button>
+              </div>
+              <div class="hero-inner-image">
+                <img src="<%= data[i].image %>" alt="Ps5" />
+              </div>
+              <div class="informations-title">
+                <p class="title"><%= data[i].title %></p>
+              </div>
+              <div class="informations-dps">
+                <del class="delete_price"><%= data[i].deleted_price%> сум</del>
+                <h4 class="price"><%= data[i].price %> сум</h4>
+                <p class="nasiya"><%= data[i].nasiya %> сум 12 мес</p>
+              </div>
+              <div class="buttons">
+                <button class="buy_btn"><img src="/public/images/shopping-cart.png" alt="buy" /></button>
+                <button>В расрочку</button>
+              </div>
+            </div>
+            <% }; %>
+          </div>
+          <div class="hero-inner-rasrochka">
+            <img src="/public/images/rasrochka_img.jpg" alt="">
+          </div>
+
+          <div class="wrapper">
+            <% for(let i = 12;i<=19; i++) { %>
+              <div class="hero-inner">
+                <div class="hero-inner-like">
+                  <h4>-<%= data[i].sale %>%</h4>
+                  <button id="heart-btn">
+                    <img
+                      class="heart"
+                      src="/public/images/heart-svgrepo-com.svg"
+                      alt="heart"
+                    />
+                  </button>
+                </div>
+                <div class="hero-inner-wifi">
+                  <button id="wifi-btn">
+                    <img class="wifi" src="/public/images/column.png" alt="heart" />
+                  </button>
+                </div>
+                <div class="hero-inner-image">
+                  <img src="<%= data[i].image %>" alt="Ps5" />
+                </div>
+                <div class="informations-title">
+                  <p class="title"><%= data[i].title %></p>
+                </div>
+                <div class="informations-dps">
+                  <del class="delete_price"><%= data[i].deleted_price%> сум</del>
+                  <h4 class="price"><%= data[i].price %> сум</h4>
+                  <p class="nasiya"><%= data[i].nasiya %> сум 12 мес</p>
+                </div>
+                <div class="buttons">
+                  <button class="buy_btn"><img src="/public/images/shopping-cart.png" alt="buy"/></button>
+                  <button>В расрочку</button>
+                </div>
+              </div>
+              <% }; %>
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+          
+          <!-- Logo & Tagline -->
+          <div class="logo-section">
+              <img src="/public/images/logo.png" alt="Your Brand Logo">
+              <p>Your Journey, Our Passion.</p>
+              <p>Unique finds, curated for you.</p>
+          </div>
+          
+          <!-- Navigation Links -->
+          <div class="nav-section">
+              <h3>Explore</h3>
+              <ul>
+                  <li><a href="/shop">Shop</a></li>
+                  <li><a href="/about">About Us</a></li>
+                  <li><a href="/contact">Contact</a></li>
+                  <li><a href="/blog">Blog</a></li>
+              </ul>
+          </div>
+  
+          <!-- Unique Feature: Customer Inspiration Section -->
+          <div class="inspiration-section">
+              <h3>Inspired by You</h3>
+              <p>Share your stories with us.</p>
+              <a href="/share-story" class="cta-button">Share Your Story</a>
+          </div>
+  
+          <!-- Social Media & Newsletter -->
+          <div class="social-section">
+              <h3>Stay Connected</h3>
+              <div class="social-icons">
+                  <a href="https://www.facebook.com" target="_blank">
+                      <img src="/public/images/facebook.svg" alt="Facebook">
+                  </a>
+                  <a href="https://www.twitter.com" target="_blank">
+                      <img src="/public/images/twitter.svg" alt="Twitter">
+                  </a>
+                  <a href="https://www.instagram.com" target="_blank">
+                      <img src="/public/images/instagram.svg" alt="Instagram">
+                  </a>
+              </div>
+              <form action="/subscribe" method="POST" class="newsletter-form">
+                  <input type="email" name="email" placeholder="Your Email">
+                  <button type="submit">Subscribe</button>
+              </form>
+          </div>
+  
+          <!-- Unique Feature: Sustainability Commitment -->
+          <div class="sustainability-section">
+              <h3>Our Commitment</h3>
+              <p>Every purchase plants a tree.</p>
+              <p>Join us in making a difference.</p>
+              <a href="/sustainability" class="sustainability-button">Learn More</a>
+          </div>
+  
+      </div>
+      <div class="footer-bottom">
+          <p>&copy; 2024 Your Brand. All Rights Reserved. | Privacy Policy | Terms of Service</p>
+      </div>
+  </footer>
+  
+
+
+    <script src="/public/JS/modal.js"></script>
+    <script src="/public/JS/script.js"></script>
+  </body>
+</html>

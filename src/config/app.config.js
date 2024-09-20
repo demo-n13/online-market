@@ -1,9 +1,9 @@
-import { config } from "dotenv"
+import { config  } from "dotenv"
 
-config()
+config();
 
 export const appConfig = {
-  port: process.env.APP_PORT,
-  host: process.env.APP_HOST
-}
+    port:process.env.APP_PORT,
+    host:process.env.APP_HOST,
 
+}
